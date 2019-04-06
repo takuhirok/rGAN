@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>rGAN</title>
+  </head>
+
+  <style type="text/css">
+    footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    .bg-whitesmoke {
+    background-color: whitesmoke
+    }
+  </style>
+  
+  <body>
+    <header>
+      <div class="jumbotron text-center bg-whitesmoke">
+	<div class="container">
+	  <h2>Label-Noise Robust Generative Adversarial Networks</h2>
+	  <p class="lead">
+	    <a href="http://www.kecl.ntt.co.jp/people/kaneko.takuhiro/">Takuhiro Kaneko</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+	    <a href="https://yoshitakaushiku.net/">Yoshitaka Ushiku</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+	    <a href="https://www.mi.t.u-tokyo.ac.jp/harada/">Tatsuya Harada</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;<br>
+	    <sup>1</sup>The University of Tokyo&nbsp;&nbsp;&nbsp;
+	    <sup>2</sup>RIKEN
+	  </p>
+	  <p class="lead">
+	  CVPR 2019 (Oral)<br>
+	  <a href="https://arxiv.org/abs/1811.11165">[Paper]</a>
+	  <a>[Code (to be released soon)]</a>
+	  </p>
+	</div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+	<figure class="figure text-center">
+	  <a name="fig1"><img src="images/examples.png" width="80%" alt="examples"></a>
+	  <figcaption class="figure-caption text-left">
+	    Figure 1. Examples of label-noise robust conditional image generation. Our goal is, given noisy labeled data (b), to learn a conditional generative distribution that corresponds with clean labeled data (a). When naive cGAN (c) is trained with (b), it fails to learn the disentangled representations, disturbed by noisy labeled data. In contrast, proposed rcGAN (d) succeeds in learning the representations disentangled on the basis of clean labels, which are close to (a), even when we can only access the noisy labeled data (b) during training.
+	  </figcaption>
+	</figure>
+
+	<h3 class="text-center">Abstract</h3>
+	<p>
+	  Generative adversarial networks (GANs) are a framework that learns a generative distribution through adversarial training. Recently, their class conditional extensions (e.g., conditional GAN (cGAN) and auxiliary classifier GAN (AC-GAN)) have attracted much attention owing to their ability to learn the disentangled representations and to improve the training stability. However, their training requires the availability of large-scale accurate class-labeled data, which are often laborious or impractical to collect in a real-world scenario. To remedy the drawback, we propose a novel family of GANs called <strong>label-noise robust GANs (rGANs)</strong>, which, by incorporating a noise transition model, can learn a clean label conditional generative distribution even when training labels are noisy. In particular, we propose two variants: <strong>rAC-GAN</strong>, which is a bridging model between AC-GAN and the label-noise robust classification model, and <strong>rcGAN</strong>, which is an extension of cGAN and solves this problem with no reliance on any classifier. In addition to providing the theoretical background, we demonstrate the effectiveness of our models through extensive experiments using diverse GAN configurations, various noise settings, and multiple evaluation metrics (in which we tested 402 conditions in total).
+	</p>
+
+	<h3 class="text-center">Paper</h3>
+	<p class="text-center">
+	  <a href="https://arxiv.org/abs/1811.11165">[arXiv]</a><br>
+	  arXiv preprint arXiv:1811.11165, Nov. 2018.
+	</p>
+	
+	<h3 class="text-center">Citation</h3>
+	<p class="text-center">
+	  Takuhiro Kaneko, Yoshitaka Ushiku, and Tatsuya Harada.<br>
+	  Label-Noise Robust Generative Adversarial Networks. In CVPR, 2019.
+	</p>
+
+	<h3 class="text-center">Code</h3>
+	<p class="text-center">
+	  To be released soon.
+	</p>
+	
+	<h3 class="text-center">Overview</h3>
+	<p>
+	  Our task is, when given <em>noisy labeled</em> samples, to construct a label-noise robust conditional generator that can generate an image conditioned on the <em>clean label</em> rather than conditioned on the <em>noisy label</em>. Our main idea for solving this problem is to incorporate a noise transition model (which represents a probability that a clean label is corrupted to a noisy label) into typical class conditional GANs. In particular, we develop two variants: <strong>rAC-GAN</strong> (<a href="#fig2">Figure 2(b)</a>) and <strong>rcGAN</strong> (<a href="#fig2">Figure 2(d)</a>) that are extensions of AC-GAN <a href="#ref1">[1]</a> (<a href="#fig2">Figure 2(a)</a>) and cGAN <a href="#ref2">[2]</a> <a href="#ref3">[3]</a> (<a href="#fig2">Figure 2(c)</a>), respectively. We view the noise transition models as orange rectangles.
+	</p>
+	
+	<figure class="figure text-center">
+	  <a name="fig2"><img src="images/networks.png" width="80%" alt="examples"></a>
+	  <figcaption class="figure-caption text-left">
+	    Figure 2. Comparison of naive and label-noise robust GANs. We denote the discriminator and auxiliary classifier by <em>D</em> and <em>C</em>, respectively. In our rAC-GAN (b) and rcGAN (d), we incorporate a noise transition model (viewed as an orange rectangle) into AC-GAN (a) and cGAN (c), respectively.
+	  </figcaption>
+	</figure>
+
+	<h3 class="text-center">Acknowledgement</h3>
+	<p>
+	  We would like to thank Hiroharu Kato, Yusuke Mukuta, and Mikihiro Tanaka for helpful discussions. This work was supported by JSPS KAKENHI Grant Number JP17H06100, partially supported by JST CREST Grant Number JPMJCR1403, Japan, and partially supported by the Ministry of Education, Culture, Sports, Science and Technology (MEXT) as "Seminal Issue on Post-K Computer."
+	</p>
+
+	<h3 class="text-center">Related work</h3>
+	<p>
+	  <a name="ref1" class="text-primary">[1]</a>
+	  A. Odena, C. Olah, and J. Shlens.
+	  Conditional image synthesis with auxiliary classifier GANs.
+	  In ICML, 2017.
+	  <a href="https://arxiv.org/abs/1610.09585">[arXiv]</a><br>
+	  
+	  <a name="ref2" class="text-primary">[2]</a>
+	  M. Mirza and S. Osindero.
+	  Conditional generative adversarial nets.
+	  arXiv preprint arXiv:1411.1784, 2014.
+	  <a href="https://arxiv.org/abs/1411.1784">[arXiv]</a><br>
+	  
+	  <a name="ref3" class="text-primary">[3]</a>
+	  T. Miyato and M. Koyama.
+	  cGANs with projection discriminator.
+	  In ICLR, 2018.
+	  <a href="https://arxiv.org/abs/1802.05637">[arXiv]</a>
+	</p>	
+      </div>
+    </main>
+
+    <footer class="text-center bg-whitesmoke">      
+      <div class="container">
+	<small>
+	  <strong>Label-Noise Robust Generative Adversarial Networks</strong><br>
+	  <a href="http://www.kecl.ntt.co.jp/people/kaneko.takuhiro/">Takuhiro Kaneko</a> | t.kaneko at mi.t.u-tokyo.ac.jp
+	</small>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
