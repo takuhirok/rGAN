@@ -1,0 +1,6 @@
+@inproceedings{kaneko2019rGAN,
+  title={Label-Noise Robust Generative Adversarial Networks},
+  author={Kaneko, Takuhiro and Ushiku, Yoshitaka and Harada, Tatsuya},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2019}
+}
