@@ -77,6 +77,15 @@ python test.py --g_path outputs/netG_iter_100000.pth --out samples
 **NOTE:**
 In our paper, we conducted early stopping based on the FID because some models collapsed before the end of the training.
 
+## Samples
+### CIFAR-10 (symmetric noise with a noise rate of 0.5)
+
+In each picture block, each column shows samples associated with the same class: *airplane*, *automobile*, *bird*, *cat*, *deer*, *dog*, *frog*, *horse*, *ship*, and *truck*, respectively, from left to right. Each row includes samples generated from a fixed ***z*** and a varied *y<sup>g</sup>*.
+
+<img src="docs/images/samples_symmetric_racgan.png" width=100% alt="comparison between AC-CT-GAN and rAC-CT-GAN">
+
+<img src="docs/images/samples_symmetric_rcgan.png" width=100% alt="comparison between cSN-GAN and rcSN-GAN">
+
 ## Citation
 If you use this code for your research, please cite our paper.
 

@@ -59,7 +59,9 @@
     <main>
       <div class="container">
 	<figure class="figure text-center">
-	    <a name="fig1"><img src="images/examples.png" width="100%" alt="examples"></a>
+	  <p>
+	    <a name="fig1"><img src="images/examples.png" alt="examples" width=1000></a>
+	  </p>
 	  <figcaption class="figure-caption text-left">
 	    Figure 1. Examples of label-noise robust conditional image generation. rGAN can learn a label-noise robust conditional generator that can generate an image conditioned on the <em>clean</em> label rather than conditioned on the <em>noisy</em> label even when the <em>noisy</em> labeled data are only available during the training.
 	  </figcaption>
@@ -88,7 +90,7 @@
 	  </table>
 	</p>
 	
-	<h3 class="text-center">Citation</h3>
+	<h4 class="text-center">Citation</h4>
 	<p class="text-center">
 	  Takuhiro Kaneko, Yoshitaka Ushiku, and Tatsuya Harada.<br>
 	  Label-Noise Robust Generative Adversarial Networks. In CVPR, 2019.<br>
@@ -106,9 +108,27 @@
 	</p>
 	
 	<figure class="figure text-center">
-	  <a name="fig2"><img src="images/networks.png" width="80%" alt="examples"></a>
+	  <p>
+	    <a name="fig2"><img src="images/networks.png" alt="examples" width=800></a>
+	  </p>
 	  <figcaption class="figure-caption text-left">
 	    Figure 2. Comparison of naive and label-noise robust GANs. We denote the discriminator and auxiliary classifier by <em>D</em> and <em>C</em>, respectively. In our rAC-GAN (b) and rcGAN (d), we incorporate a noise transition model (viewed as an orange rectangle) into AC-GAN (a) and cGAN (c), respectively.
+	  </figcaption>
+	</figure>
+
+	<h3 class="text-center">Samples</h3>
+	<p class="text-center">
+	  CIFAR-10 (symmetric noise with a noise rate of 0.5)
+	</p>
+	<figure class="figure text-center">
+	  <p>
+	    <a name="fig3-1"><img src="images/samples_symmetric_racgan.png" alt="comparison between AC-CT-GAN and rAC-CT-GAN" width=800></a>
+	  </p>
+	  <p>
+	    <a name="fig3-2"><img src="images/samples_symmetric_rcgan.png" alt="comparison between cSN-GAN and rcSN-GAN" width=800></a>
+	  </p>
+	  <figcaption class="figure-caption text-left">
+	    Figure 3. Generated image samples on CIFAR-10 (symmetric noise with a noise rate of 0.5). In each picture block, each column shows samples associated with the same class: <em>airplane</em>, <em>automobile</em>, <em>bird</em>, <em>cat</em>, <em>deer</em>, <em>dog</em>, <em>frog</em>, <em>horse</em>, <em>ship</em>, and <em>truck</em>, respectively, from left to right. Each row includes samples generated from a fixed <em><strong>z</strong></em> and a varied <em>y<sup>g</sup></em>.
 	  </figcaption>
 	</figure>
 
