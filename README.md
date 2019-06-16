@@ -13,7 +13,10 @@ Label-Noise Robust Generative Adversarial Networks.<br>
 [Takuhiro Kaneko](http://www.kecl.ntt.co.jp/people/kaneko.takuhiro/), [Yoshitaka Ushiku](https://yoshitakaushiku.net/), and [Tatsuya Harada](https://www.mi.t.u-tokyo.ac.jp/harada/).<br>
 In CVPR 2019 (Oral).
 
-[[Project]](https://takuhirok.github.io/rGAN/) [[Paper]](https://arxiv.org/abs/1811.11165)
+[[Project]](https://takuhirok.github.io/rGAN/)
+[[Paper]](https://arxiv.org/abs/1811.11165)
+[[Slides]](docs/rGAN_slides.pdf)
+[[Poster]](docs/rGAN_poster.pdf)
 
 ## Overview
 
@@ -100,6 +103,10 @@ If you use this code for your research, please cite our paper.
 
 ## Related work
 
+**NOTE:**
+Kiran Koshy Thekumparampil, Ashish Khetan, Zinan Lin, and Sewoong Oh published a paper [4] independently from us on the same problem. They use similar ideas as our work, albeit with a different architecture. You should also check out their awesome work at [https://arxiv.org/abs/1811.03205](https://arxiv.org/abs/1811.03205).
+
 1. A. Odena, C. Olah, and J. Shlens. Conditional image synthesis with auxiliary classifier GANs. In ICML, 2017. [[arXiv]](https://arxiv.org/abs/1610.09585)
 2. M. Mirza and S. Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411.1784, 2014. [[arXiv]](https://arxiv.org/abs/1411.1784)
 3. T. Miyato and M. Koyama. cGANs with projection discriminator. In ICLR, 2018. [[arXiv]](https://arxiv.org/abs/1802.05637)
+4. K. K. Thekumparampil, A. Khetan, Z. Lin, and S. Oh. Robustness of Conditional GANs to Noisy Labels. In NeurIPS 2018. [[arXiv](https://arxiv.org/abs/1811.03205)]
