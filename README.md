@@ -17,6 +17,7 @@ In CVPR 2019 (Oral).
 [[Paper]](https://arxiv.org/abs/1811.11165)
 [[Slides]](docs/rGAN_slides.pdf)
 [[Poster]](docs/rGAN_poster.pdf)
+[[Talk]](https://www.youtube.com/watch?v=9GR8V-VR4Qg&t=5300s)
 
 ## Overview
 
