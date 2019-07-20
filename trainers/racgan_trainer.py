@@ -29,7 +29,7 @@ class rACGANTrainer():
         with torch.enable_grad():
             alpha = torch.rand(x_real.size(0), 1, 1, 1).to(device)
             alpha = alpha.expand_as(x_real)
-            x_hat = alpha * x_real.data + (1 - alpha) * x_fake.data
+            x_hat = alpha * x_real.detach() + (1 - alpha) * x_fake.detach()
             x_hat.requires_grad = True
             output = netD(x_hat)[index]
             grad_output = torch.ones(output.size()).to(device)
