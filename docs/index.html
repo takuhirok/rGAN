@@ -66,12 +66,18 @@
 	    <a name="fig1"><img class="w-100" src="images/examples.png" alt="examples"></a>
 	  </p>
 	  <figcaption class="figure-caption text-left">
-	    Figure 1. Examples of label-noise robust conditional image generation. rGAN can learn a label-noise robust conditional generator that can generate an image conditioned on the <em>clean</em> label rather than conditioned on the <em>noisy</em> label even when the <em>noisy</em> labeled data are only available during the training.
+	    Figure 1. Examples of label-noise robust conditional image generation. rGAN can learn a label-noise robust conditional generator that can generate an image conditioned on the <em>clean label</em> even when the <em>noisy labeled images</em> are only available for training.
 	  </figcaption>
 	</figure>
 
 	<p>
-	  <strong>NOTE:</strong> In BMVC 2019, we propose <strong> classifier's posterior GAN</strong> (<a href="https://arxiv.org/abs/1811.11163"><strong>CP-GAN</strong></a>) <a href="#ref5">[5]</a>, which is another conditional extension of GAN for <em>class-overlapping</em> data. Check it from <a href="https://takuhirok.github.io/CP-GAN/"><strong>HERE</strong></a>!
+	  <strong>Note:</strong> In our other studies, we have also proposed GAN for <em>class-overlapping data</em> and GAN for <em>image noise</em>. Please check them from the links below.
+	</p>
+	<p class="text-center">
+          <a href="https://takuhirok.github.io/CP-GAN/"><strong>Classifier's posterior GAN (CP-GAN)</strong></a> (BMVC 2019):
+	  GAN for <em>class-overlapping data</em><br>
+	  <a href="https://takuhirok.github.io/NR-GAN/"><strong>Noise robust GAN (NR-GAN)</strong></a> (CVPR 2020):
+	  GAN for <em>image noise</em>
 	</p>
 
 	<h3 class="text-center">Abstract</h3>
@@ -107,7 +113,8 @@
 	<h5 class="text-center">Citation</h5>
 	<p class="text-center">
 	  Takuhiro Kaneko, Yoshitaka Ushiku, and Tatsuya Harada.<br>
-	  Label-Noise Robust Generative Adversarial Networks. In CVPR, 2019.<br>
+	  Label-Noise Robust Generative Adversarial Networks.
+	  In CVPR, 2019.<br>
 	  <a href="rGAN.txt" class="lead">[BibTex]</a>
 	</p>
 	
@@ -131,14 +138,12 @@
 	    <a name="fig2"><img class="w-100" src="images/networks.png" alt="examples"></a>
 	  </p>
 	  <figcaption class="figure-caption text-left">
-	    Figure 2. Comparison of naive and label-noise robust GANs. We denote the discriminator and auxiliary classifier by <em>D</em> and <em>C</em>, respectively. In our rAC-GAN (b) and rcGAN (d), we incorporate a noise transition model (viewed as an orange rectangle) into AC-GAN (a) and cGAN (c), respectively.
+	    Figure 2. Comparison of standard conditional GANs and label-noise robust GANs. We denote the discriminator and auxiliary classifier by <em>D</em> and <em>C</em>, respectively. In our rAC-GAN (b) and rcGAN (d), we incorporate a noise transition model (viewed as an orange rectangle) into AC-GAN (a) and cGAN (c), respectively.
 	  </figcaption>
 	</figure>
 
-	<h3 class="text-center">Samples</h3>
-	<p class="text-center">
-	  CIFAR-10 (symmetric noise with a noise rate of 0.5)
-	</p>
+	<h3 class="text-center">Examples of generated images</h3>
+	<h5 class="text-center">CIFAR-10 (symmetric noise with a noise rate of 0.5)</h5>
 	<figure class="figure text-center">
 	  <p>
 	    <a name="fig3-1"><img class="w-75" src="images/samples_symmetric_racgan.png" alt="comparison between AC-CT-GAN and rAC-CT-GAN"></a>
@@ -151,49 +156,47 @@
 	  </figcaption>
 	</figure>
 
-	<h3 class="text-center">Acknowledgement</h3>
+	<h3 class="text-center">Acknowledgment</h3>
 	<p>
 	  We would like to thank Hiroharu Kato, Yusuke Mukuta, and Mikihiro Tanaka for helpful discussions. This work was supported by JSPS KAKENHI Grant Number JP17H06100, partially supported by JST CREST Grant Number JPMJCR1403, Japan, and partially supported by the Ministry of Education, Culture, Sports, Science and Technology (MEXT) as "Seminal Issue on Post-K Computer."
 	</p>
 
 	<h3 class="text-center">Related work</h3>
 	<p>
-	  <strong>NOTE:</strong>
+	  <strong>Note:</strong>
 	  Kiran Koshy Thekumparampil, Ashish Khetan, Zinan Lin, and Sewoong Oh published a paper <a href="#ref4">[4]</a> independently from us on the same problem. They use similar ideas as our work, albeit with a different architecture. You should also check out their awesome work at <a href="https://arxiv.org/abs/1811.03205">https://arxiv.org/abs/1811.03205</a>.
 	</p>
 	
 	<p>
 	  <a name="ref1" class="text-primary">[1]</a>
 	  A. Odena, C. Olah, and J. Shlens.
-	  Conditional image synthesis with auxiliary classifier GANs.
-	  In ICML, 2017.
-	  <a href="https://arxiv.org/abs/1610.09585">[Paper]</a><br>
+	  <a href="https://arxiv.org/abs/1610.09585"><strong>Conditional image synthesis with auxiliary classifier GANs</strong></a>.
+	  In ICML, 2017.<br>
 	  
 	  <a name="ref2" class="text-primary">[2]</a>
 	  M. Mirza and S. Osindero.
-	  Conditional generative adversarial nets.
-	  arXiv preprint arXiv:1411.1784, 2014.
-	  <a href="https://arxiv.org/abs/1411.1784">[Paper]</a><br>
+	  <a href="https://arxiv.org/abs/1411.1784"><strong>Conditional generative adversarial nets</strong></a>.
+	  arXiv preprint arXiv:1411.1784, 2014.<br>
 	  
 	  <a name="ref3" class="text-primary">[3]</a>
 	  T. Miyato and M. Koyama.
-	  cGANs with projection discriminator.
-	  In ICLR, 2018.
-	  <a href="https://arxiv.org/abs/1802.05637">[Paper]</a><br>
+	  <a href="https://github.com/pfnet-research/sngan_projection"><strong>cGANs with projection discriminator</strong></a>.
+	  In ICLR, 2018.<br>
 
 	  <a name="ref4" class="text-primary">[4]</a>
 	  K. K. Thekumparampil, A. Khetan, Z. Lin, and S. Oh.
-	  Robustness of Conditional GANs to Noisy Labels.
-	  In NeurIPS 2018.
-	  <a href="https://arxiv.org/abs/1811.03205">[Paper]</a><br>
+	  <a href="https://github.com/POLane16/Robust-Conditional-GAN"><strong>Robustness of Conditional GANs to Noisy Labels</strong></a>.
+	  In NeurIPS, 2018.<br>
 
 	  <a name="ref5" class="text-primary">[5]</a>
 	  T. Kaneko, Y. Ushiku, T. Harada.
-	  Class-Distinct and Class-Mutual Image Generation with GANs
-	  In BMVC 2019.
-	  <a href="https://arxiv.org/abs/1811.11163">[Paper]</a>
-	  <a href="https://takuhirok.github.io/CP-GAN/">[Project]</a>
-	  <a href="https://github.com/takuhirok/CP-GAN/">[Code]<br>
+	  <a href="https://takuhirok.github.io/CP-GAN/"><strong>Class-Distinct and Class-Mutual Image Generation with GANs</strong></a>.
+	  In BMVC, 2019.<br>
+
+	  <a name="ref6" class="text-primary">[6]</a>
+	  T. Kaneko, T. Harada.
+	  <a href="https://takuhirok.github.io/NR-GAN/"><strong>Noise Robust Generative Adversarial Networks</strong></a>.
+	  In CVPR, 2020.
 	</p>
       </div>
     </main>
