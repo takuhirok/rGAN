@@ -6,10 +6,11 @@ rGAN can learn a *label-noise robust conditional generator* that can generate an
 <img src="docs/images/examples.png" width=100% alt="rGAN examples">
 
 **Note:**
-In our other studies, we have also proposed GAN for *class-overlapping data* and GAN for *image noise*. Please check them from the links below.
+In our other studies, we have also proposed GAN for *ambiguous labels*, GAN for *image noise*, and GAN for *blur, noise, and compression*. Please check them from the links below.
 
-- [**Classifier's posterior GAN (CP-GAN)**](https://takuhirok.github.io/CP-GAN/) (BMVC 2019): GAN for *class-overlapping data*
+- [**Classifier's posterior GAN (CP-GAN)**](https://takuhirok.github.io/CP-GAN/) (BMVC 2019): GAN for *ambiguous labels*
 - [**Noise robust GAN (NR-GAN)**](https://takuhirok.github.io/NR-GAN/) (CVPR 2020): GAN for *image noise*
+- [**Blur, noise, and compression robust GAN (BNCR-GAN)**](https://takuhirok.github.io/BNCR-GAN/) (CVPR 2021): GAN for *blur, noise, and compression*
 
 ## Paper
 
@@ -111,9 +112,10 @@ If you use this code for your research, please cite our paper.
 **Note:**
 Kiran Koshy Thekumparampil, Ashish Khetan, Zinan Lin, and Sewoong Oh published a paper [4] independently from us on the same problem. They use similar ideas as our work, albeit with a different architecture. You should also check out their awesome work at [https://arxiv.org/abs/1811.03205](https://arxiv.org/abs/1811.03205).
 
-1. A. Odena, C. Olah, and J. Shlens. [**Conditional image synthesis with auxiliary classifier GANs**](https://arxiv.org/abs/1610.09585). In ICML, 2017.
-2. M. Mirza and S. Osindero. [**Conditional generative adversarial nets**](https://arxiv.org/abs/1411.1784). arXiv preprint arXiv:1411.1784, 2014.
-3. T. Miyato and M. Koyama. [**cGANs with projection discriminator**](https://github.com/pfnet-research/sngan_projection). In ICLR, 2018.
+1. A. Odena, C. Olah, and J. Shlens. [**Conditional Image Synthesis with Auxiliary Classifier GANs**](https://arxiv.org/abs/1610.09585). In ICML, 2017.
+2. M. Mirza and S. Osindero. [**Conditional Generative Adversarial Nets**](https://arxiv.org/abs/1411.1784). arXiv preprint arXiv:1411.1784, 2014.
+3. T. Miyato and M. Koyama. [**cGANs with Projection Discriminator**](https://github.com/pfnet-research/sngan_projection). In ICLR, 2018.
 4. K. K. Thekumparampil, A. Khetan, Z. Lin, and S. Oh. [**Robustness of Conditional GANs to Noisy Labels**](https://github.com/POLane16/Robust-Conditional-GAN). In NeurIPS, 2018.
-5. T. Kaneko, Y. Ushiku, T. Harada. [**Class-Distinct and Class-Mutual Image Generation with GANs**](https://takuhirok.github.io/CP-GAN/). In BMVC, 2019.
-6. T. Kaneko, T. Harada. [**Noise Robust Generative Adversarial Networks**](https://takuhirok.github.io/NR-GAN/). In CVPR, 2020.
+5. T. Kaneko, Y. Ushiku, and T. Harada. [**Class-Distinct and Class-Mutual Image Generation with GANs**](https://takuhirok.github.io/CP-GAN/). In BMVC, 2019.
+6. T. Kaneko and T. Harada. [**Noise Robust Generative Adversarial Networks**](https://takuhirok.github.io/NR-GAN/). In CVPR, 2020.
+7. T. Kaneko and T. Harada. [**Blur, Noise, and Compression Robust Generative Adversarial Networks**](https://takuhirok.github.io/BNCR-GAN/). In CVPR, 2021.
